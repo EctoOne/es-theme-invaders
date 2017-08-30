@@ -1,0 +1,8 @@
+
+<theme>
+<formatVersion>4</formatVersion>
+
+<!-- Include Config File -->
+<include>./config.xml</include>
+
+</theme>

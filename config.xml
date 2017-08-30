@@ -1,0 +1,22 @@
+<theme>
+<formatVersion>4</formatVersion>
+
+<!-- Variables -->
+ <variables>
+ 
+<!-- Logo Variables -->
+  <themeLogo>invaders</themeLogo> <!-- System Logo Folder (needs to be a folder in the .assets/ folder) -->
+  <themeLogoEXT>png</themeLogoEXT> <!-- The Logo file extension (eg. png or svg)-->
+ 
+ </variables>
+ 
+ 
+<!-- Choose which theme you want for the views  -->
+
+<!-- Systemview Theme -->
+ <include>./_themefiles/invaders-carousel.xml</include>
+
+<!-- Main (Basic/Detailed/Video) Theme -->	
+ <include>./_themefiles/invaders-main.xml</include>
+	
+</theme>

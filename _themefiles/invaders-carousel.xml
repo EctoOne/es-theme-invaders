@@ -1,0 +1,93 @@
+<!--
+theme name:		Divided (Default Layout)
+version:		1.0
+license:		creative commons CC-BY-NC-SA
+-->
+
+<theme>
+<formatVersion>4</formatVersion>
+
+<!-- Variables -->
+<variables>
+ <cbackgroundColor>000000</cbackgroundColor>
+ <cFont>Cabin-Bold.ttf</cFont>
+ <cfontColor>ffffff</cfontColor>
+ <clogoColor>ffffff</clogoColor>
+</variables>
+
+<!-- Background -->
+ <view name="system">
+  <image name="background_color" extra="true">
+   <tile>false</tile>
+   <path>./assets-invaders/background.png</path>
+   <origin>0 0</origin>
+   <pos>0 0</pos>
+   <size>1 1</size>
+   <color>${cbackgroundColor}</color>
+   <zIndex>1</zIndex>
+  </image>
+  <image name="footer" extra="true">
+   <tile>false</tile>
+   <path>./assets-invaders/footer.png</path>
+   <origin>0 1</origin>
+   <pos>0 1</pos>
+   <size>1 0.3</size>
+   <zIndex>2</zIndex>
+  </image>
+  
+<!-- Logo -->
+  <image name="logo">
+   <path>./logo-${themeLogo}/${system.theme}.${themeLogoEXT}</path>
+   <color>${clogoColor}</color>
+  </image>
+  <text name="logoText">
+   <fontPath>./assets-invaders/${cFont}</fontPath>
+   <forceUppercase>1</forceUppercase>
+   <fontSize>0.05</fontSize>
+   <color>${cfontColor}</color>
+  </text>
+  <text name="system_name" extra="true">
+   <text>${system.fullName}</text>
+   <fontPath>./assets-invaders/${cFont}</fontPath>
+   <forceUppercase>1</forceUppercase>
+   <fontSize>0.03</fontSize>
+   <color>${cfontColor}</color>
+   <origin>0 0</origin>
+   <pos>0.005 0.005</pos>
+   <alignment>left</alignment>
+  </text>
+
+<!-- Helpsystem -->
+  <helpsystem name="help">
+   <textColor>${cfontColor}</textColor>
+   <iconColor>${cfontColor}</iconColor>
+  </helpsystem>
+ </view>
+  
+<!-- SystemCarousel -->  
+<feature supported="carousel">
+ <view name="system">
+  <carousel name="systemcarousel">
+   <type>horizontal</type>
+   <origin>0.5 0.5</origin>
+   <pos>0.5 0.4</pos>
+   <size>0.95 0.2</size>
+   <color>00000000</color>
+   <logoScale>1.5</logoScale>
+   <logoSize>0.1 0.1</logoSize>
+   <maxLogoCount>10</maxLogoCount>
+   <zIndex>3</zIndex>
+  </carousel>
+  
+  <text name="systemInfo">
+   <fontPath>./assets-invaders/${cFont}</fontPath>
+   <fontSize>0.03</fontSize>
+   <backgroundColor>00000000</backgroundColor>
+   <color>${cfontColor}</color>
+   <origin>1 0</origin>
+   <pos>0.995 0.005</pos>
+   <alignment>right</alignment>
+  </text>
+ </view>
+</feature>
+</theme>

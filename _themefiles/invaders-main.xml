@@ -1,0 +1,170 @@
+<!--
+theme name:		Divided (Right Layout)
+version:		1.0
+license:		creative commons CC-BY-NC-SA
+-->
+
+<theme>
+<formatVersion>4</formatVersion>
+
+<!-- Variables -->
+<variables>
+ <mbackgroundColor>000000</mbackgroundColor>
+ <mFont>Cabin-Bold.ttf</mFont>
+ <mfontColor>ffffff</mfontColor>
+ <mfontColorSEL>8c8c8c</mfontColorSEL>
+ <mlogoColor>ffffff</mlogoColor>
+</variables>
+
+<!-- Background -->
+ <view name="basic, detailed, video">
+  <image name="background_color" extra="true">
+   <tile>false</tile>
+   <path>./assets-invaders/background.png</path>
+   <origin>0 0</origin>
+   <pos>0 0</pos>
+   <size>1 1</size>
+   <color>${mbackgroundColor}</color>
+   <zIndex>1</zIndex>
+  </image>
+  <image name="footer" extra="true">
+   <tile>false</tile>
+   <path>./assets-invaders/footer.png</path>
+   <origin>0 1</origin>
+   <pos>0 1</pos>
+   <size>1 0.3</size>
+   <zIndex>2</zIndex>
+  </image>
+
+<!-- Logo -->
+  <text name="system_name" extra="true">
+   <text>${system.fullName}</text>
+   <fontPath>./assets-invaders/${cFont}</fontPath>
+   <forceUppercase>1</forceUppercase>
+   <fontSize>0.03</fontSize>
+   <color>${cfontColor}</color>
+   <origin>0 0</origin>
+   <pos>0.005 0.005</pos>
+   <alignment>left</alignment>
+  </text>
+  
+ <!-- Helpsystem -->
+  <helpsystem name="help">
+   <textColor>${mfontColor}</textColor>
+   <iconColor>${mfontColor}</iconColor>
+  </helpsystem>
+ </view>
+ 
+<!-- Global Element Settings -->
+ <view name="basic, detailed, video">
+  <text name="md_description, md_lbl_players, md_players, md_lbl_developer, md_developer, md_lbl_publisher, md_publsher, md_lbl_genre, md_genre, md_lbl_playcount, md_playcount, md_lbl_lastplayed, md_lbl_releasedate, md_lbl_rating">
+   <fontPath>./assets-invaders/${mFont}</fontPath>
+   <forceUppercase>1</forceUppercase>
+   <fontSize>0.03</fontSize>
+   <color>${mfontColor}</color>
+   <alignment>center</alignment>
+  </text>
+  <datetime name="md_lastplayed, md_releasedate">
+   <fontPath>./assets-invaders/${mFont}</fontPath>
+   <forceUppercase>0</forceUppercase>
+   <fontSize>0.03</fontSize>
+   <color>${mfontColor}</color>
+  </datetime>
+  <textlist name="gamelist">
+   <fontPath>./assets-invaders/${mFont}</fontPath>
+   <forceUppercase>0</forceUppercase>
+   <fontSize>0.03</fontSize>
+   <selectorColor>${mfontColor}00</selectorColor>
+   <selectedColor>${mfontColorSEL}</selectedColor>
+   <primaryColor>${mfontColor}</primaryColor>
+   <secondaryColor>${mfontColor}</secondaryColor>
+  </textlist>
+ </view>
+
+<!-- Basic Gamelist -->
+ <view name="basic">
+  <textlist name="gamelist">
+   <origin>0 0.5</origin>
+   <pos>0.04 0.5</pos>
+   <size>0.924 0.682</size>
+   <alignment>center</alignment>
+   <lineSpacing>2.3</lineSpacing>
+  </textlist>
+ </view>
+
+<!-- Detailed Cover -->
+ <view name="detailed">
+  <image name="md_image">
+   <origin>0.5 0.5</origin>
+   <pos>0.68 0.785</pos>
+   <maxSize>0.25 0.25</maxSize>
+  </image>
+ </view>
+
+<!-- Detailed View Metadata Positions -->
+ <view name="detailed, video">
+<!-------------Hidden----------------->		
+  <text name="md_lbl_players, md_players, md_lbl_developer, md_developer, md_lbl_publisher, md_publsher, md_lbl_genre, md_genre, md_lbl_playcount, md_playcount, md_lbl_lastplayed, md_lbl_releasedate, md_lbl_rating">
+   <pos>1 1</pos>
+  </text>
+  <datetime name="md_lastplayed, md_releasedate">
+   <pos>1 1</pos>
+  </datetime>
+  
+<!-------------GAMELIST------------------>		
+  <textlist name="gamelist">
+   <origin>1 0</origin>
+   <pos>0.995 0.005</pos>
+   <size>0.6 0.05</size>
+   <alignment>right</alignment>
+  </textlist>
+  
+<!-------------DESCRIPTION--------------->		
+  <text name="md_description">
+   <fontPath>./assets-invaders/INVADERS.TTF</fontPath>
+   <forceUppercase>0</forceUppercase>
+   <fontSize>0.09</fontSize>
+   <origin>0 0</origin>
+   <pos>0 0.05</pos>
+   <size>1 0.6</size>
+   <lineSpacing>1.5</lineSpacing>
+   <alignment>center</alignment>
+   <zIndex>3</zIndex>
+  </text>
+  
+<!-------------RATINGS------------------->
+  <rating name="md_rating">
+   <origin>0.5 0</origin>
+   <pos>0.98 0.65</pos>
+   <size>0.06 0.06</size>
+   <filledPath>./assets-invaders/rating_filled.png</filledPath>
+   <unfilledPath>./assets-invaders/rating_unfilled.png</unfilledPath>
+   <color>${mlogoColor}</color>
+   <rotation>-90</rotation>
+   <rotationOrigin>0 0</rotationOrigin>
+  </rating>
+</view>
+ 
+<!-- Video View -->
+ <feature supported="video">
+ <view name="video">
+  <image name="md_marquee">
+   <origin>0 0</origin>
+   <pos>1 1</pos>
+   <maxSize>0 0</maxSize>
+  </image>
+  <video name="md_video">
+   <origin>0.5 0.5</origin>
+   <pos>0.68 0.785</pos>
+   <maxSize>0.25 0.25</maxSize>
+   <default>./assets-invaders/loading.mp4</default>
+   <showSnapshotNoVideo>true</showSnapshotNoVideo>
+   <showSnapshotDelay>true</showSnapshotDelay>
+   <delay>0.2</delay>
+  </video>
+ </view>
+ </feature>
+
+</theme>
+	
+	
